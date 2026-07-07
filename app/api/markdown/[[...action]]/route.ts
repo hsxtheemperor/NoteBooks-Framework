@@ -38,6 +38,6 @@ export async function POST(
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   return NextResponse.json({ error: 'Use POST method' }, { status: 405 });
 }

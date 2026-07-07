@@ -2,7 +2,6 @@ import jwt from 'jsonwebtoken';
 import { query } from './db-client';
 import crypto from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
 
 const AUTH_SECRET = process.env.BETTER_AUTH_SECRET || process.env.AUTH_SECRET || 'dev-secret-change-me';
 
