@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'NoteBooks Science Framework',
+  title: 'NoteBooks-Science',
   description: 'A structured knowledge system for students and educators',
   viewport: {
     width: 'device-width',
@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   },
 };
 
+// This layout wraps all Next.js routes. The root static HTML is served directly 
+// via rewrites in next.config.js, so this only applies to /api routes and future dynamic pages.
 export default function RootLayout({
   children,
 }: {
@@ -17,14 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
